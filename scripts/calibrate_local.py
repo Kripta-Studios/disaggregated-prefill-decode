@@ -79,22 +79,22 @@ def main() -> None:
     local = GPU(props.name, flops, bw, props.total_memory, mfu=1.0, mbu=1.0, overhead_s=0.0)
 
     eng = Engine()
-    prompt = list(range(1000, 1000 + 4096))
+    prompt = list(range(1000, 1000 + 2048))
     rows = []
-    for T in (128, 512, 1024, 2048, 4096):
-        t = timed(lambda: eng.prefill(prompt[:T]))
+    for T in (128, 512, 2048):
+        t = timed(lambda: eng.prefill(prompt[:T]), repeats=3)
         roof = prefill_time(local, QWEN3_06B, [T])
         rows.append({"phase": "prefill", "tokens": T, "measured_ms": t * 1e3, "roofline_ms": roof * 1e3,
                      "gpu_kernel_ms": kernel_ms(lambda: eng.prefill(prompt[:T]))})
         print(rows[-1], flush=True)
-    for ctx in (128, 1024, 4096):
+    for ctx in (128, 2048):
         tok, cache = eng.prefill(prompt[:ctx])
         state = {"tok": tok}
 
         def step() -> None:
             state["tok"] = eng.decode_step(cache, state["tok"])
 
-        t = timed(step, repeats=10)  # cache grows by ~21 tokens: negligible vs ctx
+        t = timed(step, repeats=10)  # cache grows by ~12 tokens: negligible vs ctx
         roof = decode_time(local, QWEN3_06B, 1, ctx)
         rows.append({"phase": "decode", "tokens": ctx, "measured_ms": t * 1e3, "roofline_ms": roof * 1e3,
                      "gpu_kernel_ms": kernel_ms(step)})

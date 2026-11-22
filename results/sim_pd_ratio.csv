@@ -1,0 +1,37 @@
+workload,tpot_slo_ms,config,kind,policy,n_prefill,n_decode,goodput_rps,goodput_per_gpu
+chat,25.0,colocated-prefill_first 8xH100-SXM,colocated,prefill_first,,0,121.25,15.156
+chat,25.0,colocated-chunked 8xH100-SXM,colocated,chunked,,0,166.303,20.788
+chat,25.0,disagg 1xH100-SXM : 7xH100-SXM,disagg,,1,7,35.486,4.436
+chat,25.0,disagg 2xH100-SXM : 6xH100-SXM,disagg,,2,6,70.366,8.796
+chat,25.0,disagg 3xH100-SXM : 5xH100-SXM,disagg,,3,5,109.129,13.641
+chat,25.0,disagg 4xH100-SXM : 4xH100-SXM,disagg,,4,4,144.515,18.064
+chat,25.0,disagg 5xH100-SXM : 3xH100-SXM,disagg,,5,3,127.806,15.976
+chat,25.0,disagg 6xH100-SXM : 2xH100-SXM,disagg,,6,2,83.867,10.483
+chat,25.0,disagg 7xH100-SXM : 1xH100-SXM,disagg,,7,1,41.559,5.195
+chat,50.0,colocated-prefill_first 8xH100-SXM,colocated,prefill_first,,0,157.772,19.721
+chat,50.0,colocated-chunked 8xH100-SXM,colocated,chunked,,0,205.295,25.662
+chat,50.0,disagg 1xH100-SXM : 7xH100-SXM,disagg,,1,7,35.486,4.436
+chat,50.0,disagg 2xH100-SXM : 6xH100-SXM,disagg,,2,6,70.366,8.796
+chat,50.0,disagg 3xH100-SXM : 5xH100-SXM,disagg,,3,5,109.129,13.641
+chat,50.0,disagg 4xH100-SXM : 4xH100-SXM,disagg,,4,4,144.515,18.064
+chat,50.0,disagg 5xH100-SXM : 3xH100-SXM,disagg,,5,3,147.074,18.384
+chat,50.0,disagg 6xH100-SXM : 2xH100-SXM,disagg,,6,2,98.221,12.278
+chat,50.0,disagg 7xH100-SXM : 1xH100-SXM,disagg,,7,1,49.533,6.192
+long,25.0,colocated-prefill_first 8xH100-SXM,colocated,prefill_first,,0,29.255,3.657
+long,25.0,colocated-chunked 8xH100-SXM,colocated,chunked,,0,35.486,4.436
+long,25.0,disagg 1xH100-SXM : 7xH100-SXM,disagg,,1,7,5.618,0.702
+long,25.0,disagg 2xH100-SXM : 6xH100-SXM,disagg,,2,6,13.753,1.719
+long,25.0,disagg 3xH100-SXM : 5xH100-SXM,disagg,,3,5,20.958,2.62
+long,25.0,disagg 4xH100-SXM : 4xH100-SXM,disagg,,4,4,30.3,3.788
+long,25.0,disagg 5xH100-SXM : 3xH100-SXM,disagg,,5,3,35.486,4.436
+long,25.0,disagg 6xH100-SXM : 2xH100-SXM,disagg,,6,2,23.699,2.962
+long,25.0,disagg 7xH100-SXM : 1xH100-SXM,disagg,,7,1,13.048,1.631
+long,50.0,colocated-prefill_first 8xH100-SXM,colocated,prefill_first,,0,39.427,4.928
+long,50.0,colocated-chunked 8xH100-SXM,colocated,chunked,,0,47.824,5.978
+long,50.0,disagg 1xH100-SXM : 7xH100-SXM,disagg,,1,7,5.618,0.702
+long,50.0,disagg 2xH100-SXM : 6xH100-SXM,disagg,,2,6,13.753,1.719
+long,50.0,disagg 3xH100-SXM : 5xH100-SXM,disagg,,3,5,20.958,2.62
+long,50.0,disagg 4xH100-SXM : 4xH100-SXM,disagg,,4,4,30.3,3.788
+long,50.0,disagg 5xH100-SXM : 3xH100-SXM,disagg,,5,3,38.741,4.843
+long,50.0,disagg 6xH100-SXM : 2xH100-SXM,disagg,,6,2,29.773,3.722
+long,50.0,disagg 7xH100-SXM : 1xH100-SXM,disagg,,7,1,16.107,2.013

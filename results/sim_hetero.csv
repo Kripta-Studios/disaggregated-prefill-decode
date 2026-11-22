@@ -1,0 +1,17 @@
+config,kind,n_h100,n_l40s,rel_cost,goodput_rps,goodput_per_cost
+colocated-chunked 4xH100-SXM,colocated,4,0,4.0,107.23,26.808
+colocated-prefill_first 4xH100-SXM,colocated,4,0,4.0,79.565,19.891
+disagg 3xH100-SXM : 1xH100-SXM,disagg,4,0,4.0,48.671,12.168
+disagg 2xH100-SXM : 2xH100-SXM,disagg,4,0,4.0,70.366,17.591
+disagg 1xH100-SXM : 1xL40S,disagg,1,1,1.4,9.853,7.038
+disagg 1xH100-SXM : 2xL40S,disagg,1,2,1.8,17.278,9.599
+disagg 1xH100-SXM : 4xL40S,disagg,1,4,2.6,32.504,12.502
+disagg 1xH100-SXM : 6xL40S,disagg,1,6,3.4000000000000004,35.486,10.437
+disagg 1xH100-SXM : 8xL40S,disagg,1,8,4.2,35.486,8.449
+disagg 2xH100-SXM : 2xL40S,disagg,2,2,2.8,17.278,6.171
+disagg 2xH100-SXM : 4xL40S,disagg,2,4,3.6,32.504,9.029
+disagg 2xH100-SXM : 6xL40S,disagg,2,6,4.4,47.824,10.869
+disagg 2xH100-SXM : 8xL40S,disagg,2,8,5.2,63.332,12.179
+disagg 3xH100-SXM : 4xL40S,disagg,3,4,4.6,32.504,7.066
+disagg 3xH100-SXM : 6xL40S,disagg,3,6,5.4,47.824,8.856
+disagg 3xH100-SXM : 8xL40S,disagg,3,8,6.2,63.332,10.215
