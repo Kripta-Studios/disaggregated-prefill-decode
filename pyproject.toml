@@ -1,0 +1,13 @@
+[project]
+name = "disagg"
+version = "0.1.0"
+description = "Disaggregated prefill/decode: a real one-GPU mini cluster with a KV transport abstraction, plus a roofline-driven cluster simulator."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120

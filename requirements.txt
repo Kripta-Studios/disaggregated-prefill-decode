@@ -1,0 +1,8 @@
+# Uses the shared environment; nothing extra was installed for this repo.
+torch>=2.4          # tested with 2.11.0+cu128
+transformers>=5.0   # tested with 5.24.0 (Cache.layers API)
+numpy
+pandas
+matplotlib
+psutil
+pytest
